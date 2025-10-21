@@ -81,7 +81,7 @@
       ;; If targets are the same as constraints, the logpdf is 0.
       (cond
         (= targets constraints)
-        99999 ;; Should be ##Inf
+        0.0 ;; Should be ##Inf for continuous functions
         ;; If the targets and constraints are not equal but the overlapping parts are,
         ;; just remove the overlapping keys and recur the scores. 
         (every? (fn [shared-key]
@@ -94,7 +94,7 @@
                                                        (apply dissoc targets intersection)
                                                        constraints)]
                        (+ logp view-logp)))
-                   99999 ;; Should be ##Inf
+                   0.0
                    views)
         ;; If the intersection keys map to different values, the score is -Inf.
         :else ##-Inf)))
