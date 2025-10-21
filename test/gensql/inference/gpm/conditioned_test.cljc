@@ -112,7 +112,6 @@
     {} {} {:x 0} {:x 0}
     {:x 0} {:x 1} {} {:x 1}
     {:x 0} {} {:x 1} {:x 1}
-<<<<<<< HEAD:test/gensql/inference/gpm/conditioned_test.cljc
     {} {:x 0} {:x 1} {:x 1}))
 
 (deftest merged-conditions
@@ -128,8 +127,3 @@
     {:y 1} {:x 0} {:x 0 :y 1}
     {:x 0 :z 2} {:y 1} {:x 0 :y 1 :z 2}
     {:x 0} {:y 1 :z 2} {:x 0 :y 1 :z 2}))
-||||||| f8b864b:test/inferenceql/inference/gpm/conditioned_test.cljc
-    {} {:x 0} {:x 1} {:x 1}))
-=======
-    {} {:x 0} {:x 1} {:x 1}))
->>>>>>> joao/gpm_logprob:test/inferenceql/inference/gpm/conditioned_test.cljc
